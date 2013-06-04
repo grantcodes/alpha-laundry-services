@@ -1,0 +1,95 @@
+// #contact {
+// 	position: relative;
+// } 
+
+// #map {
+// 	position: absolute;
+// 	top: 0;
+// 	left: 0;
+// 	bottom: 0;
+// 	right: 0;
+// 	pointer-events: none;
+// 	z-index: 1;
+// }
+
+// #map + .cell {
+// 	position: relative;
+// 	z-index: 999;
+// 	@include columns(2);
+// 	@include column-gap(2em);
+// 	p{background-color: rgba($white, .8);}
+// }
+
+// #contact .cell {
+// 	display: block;
+// }
+
+#contact {
+	position: relative;
+	z-index: 1;
+	
+	.cell {
+		@include g-rems('font-size', 1);
+		line-height: $line-height;
+		color: $text-c;
+		font-family: 'PT Sans', 'Open Sans', Helvetica, Arial, sans-serif;
+		font-weight: 300;
+		background: none;
+		position: relative;
+		z-index: 3;
+	}
+}
+
+.left {
+	padding: 0.5em;
+	background-color: rgba($white, .9);
+	@include at-breakpoint($mid-break ie) {
+		float: left;
+		width: 45%;
+		
+		p {
+			@include g-space('margin-bottom', .5);
+		}
+
+		p:last-child {
+			margin: 0;
+		}
+	}
+	// pointer-events: auto;
+	// text-shadow: 0 0 4em $white, 0 0 4em $white, 0 0 4em $white, 0 0 4em $white, 0 0 4em $white, 0 0 4em $white;
+}
+
+.right {
+	@include at-breakpoint($mid-break ie) {
+		float: right;
+		width: 45%;
+	// pointer-events: auto;
+}
+}
+
+.cols {
+	@include columns(2);
+	@include column-gap(1em);
+}
+
+.list-cols {
+	font-size: 0.9em;
+	@include at-breakpoint($mid-break ie) {
+		overflow: hidden;
+		
+		li {
+			float: left;
+			width: 50%;
+			
+			&:nth-child(odd) {
+				width: 45%;
+				float: left;	
+			}
+
+			&:nth-child(even) {
+				width: 45%;
+				float: right;
+			} 
+		}
+	}
+}

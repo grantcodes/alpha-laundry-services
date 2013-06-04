@@ -1,0 +1,68 @@
+*, *:after, *:before {
+	@include box-sizing(border-box);
+}
+
+html, body {
+	background-color: $bgc;
+	height: 100%;
+	
+}
+
+a {
+	color: $link-c;
+	@include transition(all .3s);
+	
+	&:active, &:focus, &:hover {
+		color: $link-hover-c;
+	}
+}
+
+section {
+	display: table;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+
+
+	&.odd {
+		background-color: $green;
+		color: $white;
+		text-shadow: .05em .05em 0 rgba(0,0,0,.2);
+		
+		.wrap {
+			@include animation(bounceInLeft 1s);
+		}
+	}
+
+}
+.cell {
+	display: table-cell;
+	vertical-align: middle;
+	position: relative;
+}
+
+.wrap {
+	@include animation(bounceInRight 1s);
+	max-width: 40em;
+	margin: 0 auto;
+	padding: 1em;
+}
+
+.image-wrap {
+	padding: 1em 1em 0 1em;
+	text-align: center;
+	
+	img {
+		border: .2em solid lighten($white, 5%);
+		box-shadow: 0 0 .5em rgba(0,0,0,.05);
+		display: block;
+		margin-bottom: 1em;
+		max-width: 100%;
+		@include at-breakpoint($mid-break ie) {
+			display: inline-block;
+			max-width: 30%;
+		}
+	}
+}
+
+@include animate;

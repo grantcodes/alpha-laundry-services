@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="robots" content="noarchive">
+    <meta name="viewport" content="width=device-width, min-width=18em">
+    
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title><%= data.page.title || "The Middleman" %></title>
+    
+    <%= stylesheet_link_tag "main", "http://fonts.googleapis.com/css?family=Bree+Serif", "http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic", "http://cdn.leafletjs.com/leaflet-0.5/leaflet.css" %>
+  </head>
+  
+  <body class="<%= page_classes %>">
+    <header>
+      <div class="cell">
+        <h1>Alpha Laundry Services</h1>
+        <p data-icon="&#xf0e0;"><span class="screen-reader-text">Email: </span><a href="mailto:info@alphalaundryservices.com">info@alphalaundryservices.com</a></p>
+        <p data-icon="&#xf095;"><span class="screen-reader-text">Phone: </span><a href="tel:01505325599">01505 325599</a></p>
+        <p data-icon="&#xf041;"><span class="screen-reader-text">Address: </span><a href="#contact">Come find us</a></p>
+      </div>
+    </header>
+    <nav>
+      <a href="#about">About Us</a>
+      <a href="#team">The Team</a>
+      <a href="#services">Our Services</a>
+      <a href="#contact">Contact Us</a>
+    </nav>
+    <%= yield %>
+    <%= javascript_include_tag  "//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js", "http://cdn.leafletjs.com/leaflet-0.5/leaflet.js", "all" %>
+  </body>
+</html>

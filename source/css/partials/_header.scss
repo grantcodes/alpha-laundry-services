@@ -1,0 +1,56 @@
+header {
+	position: relative;
+	z-index: 9999;
+	background-color: $white;
+	background-image: url(../img/bg-blur.jpg);
+	background-position: middle top;
+	@include background-size(cover);
+	width: 100%;
+	box-shadow: 0 0 1em rgba(0,0,0,.5);
+	overflow: hidden;
+	text-align: center;
+	min-height: 100%;
+	display: table;
+	font-family: 'Bree Serif', serif;
+	text-shadow: .05em .05em .1em rgba(0,0,0,.3);
+	
+	.cell {
+		@include animation(fadeIn 1.5s);
+	}
+
+	
+	h1 {
+		font-weight: normal;
+		text-shadow: .05em .05em .1em rgba(0,0,0,.3), 0 0 5em rgba(255,255,255,.7);
+		@include at-breakpoint ($mid-break ie) {
+			font-size: 4em;
+		}
+	}
+
+	p {
+		@include at-breakpoint ($mid-break ie) {
+			font-size: 2em;
+		}
+		max-width: 1em;
+		overflow: hidden;
+		white-space: pre;
+		margin: 0 auto;
+		text-align: center;
+		@include transition(max-width .6s);
+		
+		&:before {
+			display: inline-block;
+			width: 1em;
+			text-align: center;
+			margin-right: 0.5em;
+		}
+
+		&:hover {
+			max-width: 18em;
+		}
+	}
+
+	a {
+		text-decoration: none;
+	}
+}
