@@ -2,10 +2,15 @@
 	@include box-sizing(border-box);
 }
 
+html {
+	max-width: 100%;
+	-ms-overflow-x: hidden;
+	    overflow-x: hidden;
+}
+
 html, body {
 	background-color: $bgc;
 	height: 100%;
-	
 }
 
 a {
@@ -55,11 +60,12 @@ section {
 	img {
 		border: .2em solid lighten($white, 5%);
 		box-shadow: 0 0 .5em rgba(0,0,0,.05);
-		display: block;
+		display: inline-block;
 		margin-bottom: 1em;
 		max-width: 100%;
+		height: auto;
+
 		@include at-breakpoint($mid-break ie) {
-			display: inline-block;
 			max-width: 30%;
 		}
 	}

@@ -3,14 +3,12 @@
 $(function () {
   $('a[href^=#]').click(function( event ) {
     var location = window.location,
-    hash = $(this).attr('href')
-    ;
+    hash = $(this).attr('href');
     $('html, body')
-    .stop()
-    .animate({scrollTop: $(hash).offset().top}, 800, function () {
-      window.location = location.pathname + location.search + hash;
-    })
-    ;
+      .stop()
+      .animate({scrollTop: $(hash).offset().top}, 1000, function () {
+        window.location = location.pathname + location.search + hash;
+      });
     event.preventDefault();
   });
 
@@ -46,16 +44,45 @@ $('#form').submit( function (e) {
     data: $('#form').serialize(),
     success: function (data) {
       var container = $('#form').parent();
-      var message = '<p class="success-message">Thank you for getting in touch.</p>';
+      var message = '<p class="success-message right">Thank you for getting in touch.</p>';
       $('#form').fadeOut();
       $(message).hide().appendTo(container).fadeIn();
     },
     error: function () {
       var container = $('#form').parent();
-      var message = '<p class="error-message">The message failed to send. Please try emailing <a href="mailto:info@alphalaundryservices.com>info@alphalaundryservices.com</a> instead.</p>';
+      var message = '<p class="error-message right">The message failed to send. Please try emailing <a href="mailto:info@alphalaundryservices.com>info@alphalaundryservices.com</a> instead.</p>';
       $('#form').fadeOut();
       $(message).hide().appendTo(container).fadeIn();
     }
   });
   // console.log(success);
+});
+
+var stick_nav = function (viewport_height, nav_height) {
+  var y = $(this).scrollTop();
+    if (y >= (viewport_height - nav_height)) {
+        $('nav').addClass('fixed');
+    } else {
+        $('nav').removeClass('fixed');
+    }
+  };
+
+var sticky_nav = function () {
+  var viewport_height = $(window).height();
+  var nav_height = $('nav').height();
+  $(window).scroll(function(){
+    stick_nav(viewport_height, nav_height);
+  });
+  stick_nav(viewport_height, nav_height);
+};
+
+sticky_nav();
+window.onresize = sticky_nav;
+
+
+// Parallax
+$(window).scroll(function(e) {
+  var y = $(this).scrollTop() / 3;
+  var header = $('header').first();
+  header.css('background-position', '50% -' + y + 'px');
 });

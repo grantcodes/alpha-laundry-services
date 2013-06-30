@@ -1,15 +1,23 @@
 nav {
-	position: fixed;
-	top: 0;
+	position: absolute;
+	bottom: 0;
 	width: 100%;
 	text-align: center;
 	background-color: $white;
+	background-color: rgba(#fff, .9);
 	border-bottom: 2px solid lighten($white, 3%);
 	// background-color: tint($black, 50%);
 	// background-color: rgba($black, .5);
 	// @include background(linear-gradient(rgba($black, .4), rgba($black, .6)));
-	z-index: 99;
+	z-index: 9999;
 	box-shadow: 0 0 .2em rgba(0,0,0,.05);
+	// @include filter(blur(10px));
+	
+	&.fixed {
+		position: fixed;
+		top: 0;
+		bottom: auto;
+	}
 	
 	a {
 		font-size: 0.9em;
