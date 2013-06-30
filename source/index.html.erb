@@ -53,16 +53,16 @@ title: Alpha Laundry Services
 	<div class="cell">
 		<div class="wrap">
 			<h1>Contact Us</h1>
-			<div class="left">
-				<p>Phone: 01505 325599</p>
-				<p>Email: <a href="mailto:info@alphalaundryservices.com">info@alphalaundryservices.com</a></p>
-				<p>Address: <br><small>
-					Unit 16 <br>
-					Mossedge <br>
-					Industrial Estate,<br>
-					Linwood, <br>
-					Renfrewshire <br>
-					PA3 3HR</small></p>
+			<div class="left" itemscope itemtype="http://schema.org/DryCleaningOrLaundry">
+				<p>Phone: <span itemprop="telephone">01505 325599</span></p>
+				<p>Email: <a itemprop="email" href="mailto:info@alphalaundryservices.com">info@alphalaundryservices.com</a></p>
+				<p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">Address: <br><small>
+					<span itemprop="streetAddress">Unit 16 <br>
+					Mossedge Industrial Estate</span>,<br>
+					<span itemprop="addressLocality">Linwood</span>, <br>
+					<span itemprop="addressRegion">Renfrewshire</span> <br>
+					<span itemprop="postalCode">PA3 3HR</span></small>
+				</p>
 				<p><a href="https://maps.google.co.uk/maps?saddr=56.462018,-2.970721&daddr=Alpha+Laundry+Services,+Unit+16,+Mossedge+Industrial+Estate,+Linwood,+Renfrewshire+PA3+3HR&hl=en&sll=55.851026,-4.489619&sspn=0.021657,0.023217&geocode=FcKKXQMdn6vS_w%3BFRI4VAMdbX67_ymlKokci0uISDG8GqLTw3UZTg&oq=my&mra=ls&glp=1&t=m&z=8">Get Directions</a></p>
 			</div>
 			<form action="email.php" method="post" id="form" class="right">
@@ -74,4 +74,5 @@ title: Alpha Laundry Services
 			</form>
 		</div>
 	</div>
+	<div id="map"></div>
 </section>

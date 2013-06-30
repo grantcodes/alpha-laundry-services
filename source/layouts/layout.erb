@@ -4,15 +4,16 @@
   <head>
     <meta charset="utf-8">
     
-    <!-- Always force latest IE rendering engine or request Chrome Frame -->
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-    <meta name="robots" content="noarchive">
     <meta name="viewport" content="width=device-width, min-width=18em">
+    <meta name="description" content="Alpha Laundry Services is a small family run laundry located just off the M8 near Glasgow Airport.">
     
-    <!-- Use title if it's in the page YAML frontmatter -->
-    <title><%= data.page.title || "The Middleman" %></title>
+    <title><%= data.page.title || "Alpha Laundry Services" %></title>
     
-    <%= stylesheet_link_tag "main", "http://fonts.googleapis.com/css?family=Bree+Serif", "http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic", "http://cdn.leafletjs.com/leaflet-0.5/leaflet.css" %>
+    <%= stylesheet_link_tag "main", "http://fonts.googleapis.com/css?family=PT+Sans:400,700|Bree+Serif", "http://cdn.leafletjs.com/leaflet-0.5/leaflet.css" %>
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   </head>
   
   <body class="<%= page_classes %>">

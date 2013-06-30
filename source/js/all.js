@@ -18,7 +18,7 @@ $(function () {
   }
 });
 
-var map = L.map('contact', {
+var map = L.map('map', {
   scrollWheelZoom: false,
   dragging: false,
   attributionControl: false,

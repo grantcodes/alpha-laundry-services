@@ -40,9 +40,18 @@
 	}
 }
 
+#map {
+	position: absolute;
+	bottom: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
 .left {
 	padding: 0.5em;
 	background-color: rgba($white, .9);
+	overflow: auto;
 	@include g-rems('margin-bottom', 1);
 	@include at-breakpoint($mid-break ie) {
 		float: left;
@@ -90,12 +99,14 @@
 			
 			&:nth-child(odd) {
 				width: 45%;
-				float: left;	
+				float: left;
+				clear: left;
 			}
 
 			&:nth-child(even) {
 				width: 45%;
 				float: right;
+				clear: right;
 			} 
 		}
 	}
