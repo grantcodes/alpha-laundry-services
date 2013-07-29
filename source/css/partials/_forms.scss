@@ -1,6 +1,6 @@
 input, select, textarea {
     background-color: $white;
-    border: 1px solid shade($bgc, 7%);
+    border: 1px solid shade($bgc, 15%);
     color: tint($text-c, 40%);
     padding: .5em .7em;
     
@@ -12,13 +12,13 @@ input, select, textarea {
     @include transition(all .4s);
 
     &:hover {
-        border: 1px solid shade($bgc, 15%);
+        border: 1px solid shade($bgc, 30%);
     }
 
     &:focus {
         color: $text-c;
         background-color: tint($white, 50%);
-        border: 1px solid shade($bgc, 20%);
+        border: 1px solid shade($bgc, 50%);
         box-shadow: inset 0 0 .2em rgba(0,0,0,0.1);
     }
 }

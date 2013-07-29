@@ -40,16 +40,20 @@
 	}
 }
 
-#map {
-	position: absolute;
-	bottom: 0;
-	top: 0;
-	left: 0;
-	right: 0;
+// #map {
+// 	position: absolute;
+// 	bottom: 0;
+// 	top: 0;
+// 	left: 0;
+// 	right: 0;
+// }
+
+.leaflet-popup-content-wrapper {
+	@include border-radius(2px !important);
 }
 
 .left {
-	padding: 0.5em;
+	// padding: 0.5em;
 	background-color: rgba($white, .9);
 	overflow: auto;
 	@include g-rems('margin-bottom', 1);

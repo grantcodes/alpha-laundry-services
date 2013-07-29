@@ -49,7 +49,7 @@ activate :directory_indexes
 # Methods defined in the helpers block are available in templates
 # helpers do
 #   def some_helper
-#     "Helping"
+#     "Helping"z
 #   end
 # end
 
@@ -58,6 +58,16 @@ set :css_dir, 'css'
 set :js_dir, 'js'
 
 set :images_dir, 'img'
+
+deploy_config = YAML::load(File.open('deploy-config.yml'))
+
+activate :deploy do |deploy|
+  deploy.method = :rsync
+  deploy.user   = deploy_config['user']
+  deploy.host   = deploy_config['host']
+  deploy.path   = deploy_config['path']
+  deploy.build_before = false # default: false
+end
 
 # Build-specific configuration
 configure :build do

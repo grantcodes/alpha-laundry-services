@@ -20,9 +20,9 @@ $(function () {
 
 var map = L.map('map', {
   scrollWheelZoom: false,
-  dragging: false,
+  dragging: true,
   attributionControl: false,
-  zoomControl: false
+  zoomControl: true
 }).setView([55.8513, -4.4896], 13);
 
 // L.control.zoom({position: 'bottomLeft'}).addTo(map);
@@ -31,7 +31,9 @@ L.tileLayer('http://{s}.tile.cloudmade.com/ac08d200814142dfae0f8cedd7996d40/997/
   maxZoom: 18
 }).addTo(map);
 
-var marker = L.marker([55.8513, -4.4896]).addTo(map);
+var marker = L.marker([55.8513, -4.4896]).addTo(map)
+.bindPopup('<p><a href="https://maps.google.co.uk/maps?saddr=56.462018,-2.970721&daddr=Alpha+Laundry+Services,+Unit+16,+Mossedge+Industrial+Estate,+Linwood,+Renfrewshire+PA3+3HR&hl=en&sll=55.851026,-4.489619&sspn=0.021657,0.023217&geocode=FcKKXQMdn6vS_w%3BFRI4VAMdbX67_ymlKokci0uISDG8GqLTw3UZTg&oq=my&mra=ls&glp=1&t=m&z=8">Get Directions</a></p>')
+.openPopup();
 
 // $('#form').attr('type', 'get');
 
