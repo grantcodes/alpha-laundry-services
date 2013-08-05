@@ -14,6 +14,7 @@ header {
 	display: table;
 	font-family: 'Bree Serif', serif;
 	text-shadow: .05em .05em .1em rgba(0,0,0,.3);
+	padding: 1em;
 	
 	.cell {
 		@include animation(fadeIn 1.5s);
@@ -55,5 +56,32 @@ header {
 
 	a {
 		text-decoration: none;
+	}
+}
+
+.opening-hours {
+	p, h3 {
+		font-size: 1em;
+		max-width: 100%;
+		@include transition (none);
+		color: white;
+		
+		&:hover {
+			max-width: 100%;
+		}
+	}
+	
+	@include at-breakpoint($mid-break lt-ie9) {
+		position: absolute;
+		bottom: 1em;
+		right: 0;
+		
+		p {
+			text-align: right;
+		}
+
+		h3 {
+			text-align: right;
+		}
 	}
 }

@@ -30,8 +30,8 @@
 	
 	.cell {
 		@include g-rems('font-size', 1);
-		line-height: $line-height;
-		color: $text-c;
+		// line-height: $line-height;
+		// color: $text-c;
 		font-family: 'PT Sans', 'Open Sans', Helvetica, Arial, sans-serif;
 		font-weight: 300;
 		background: none;
@@ -54,7 +54,7 @@
 
 .left {
 	// padding: 0.5em;
-	background-color: rgba($white, .9);
+	// background-color: rgba($white, .9);
 	overflow: auto;
 	@include g-rems('margin-bottom', 1);
 	@include at-breakpoint($mid-break ie) {
