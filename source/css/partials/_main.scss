@@ -34,6 +34,13 @@ section {
 		color: $white;
 		text-shadow: .05em .05em 0 rgba(0,0,0,.2);
 		
+		a {
+			color: $white;
+			&:active, &:focus, &:hover {
+				color: $black;
+			}
+		}
+		
 		.wrap {
 			@include animation(bounceInLeft 1s);
 		}
@@ -64,9 +71,55 @@ section {
 		margin-bottom: 1em;
 		max-width: 100%;
 		height: auto;
-
-		@include at-breakpoint($mid-break ie) {
-			max-width: 30%;
+		width: auto;
+		max-height: 3em;
+		@include at-breakpoint(20em) {
+			max-height: 4em;
+		}
+		@include at-breakpoint(25em) {
+			max-height: 5em;
+		}
+		@include at-breakpoint(30em) {
+			max-height: 6em;
+		}
+		@include at-breakpoint(35em) {
+			max-height: 4em;
+		}
+		@include at-breakpoint(40em) {
+			max-height: 5em;
+		}
+		@include at-breakpoint(45em) {
+			max-height: 6em;
+		}
+		@include at-breakpoint(50em ie) {
+			max-height: 7em;
+		}
+		@include at-breakpoint(55em) {
+			max-height: 8em;
+		}
+		@include at-breakpoint(60em) {
+			max-height: 8.5em;
+		}
+		@include at-breakpoint(65em) {
+			max-height: 9.5em;
+		}
+		@include at-breakpoint(70em) {
+			max-height: 10.5em;
+		}
+		@include at-breakpoint(75em) {
+			max-height: 11.2em;
+		}
+		@include at-breakpoint(80em) {
+			max-height: 12.2em;
+		}
+		@include at-breakpoint(85em) {
+			max-height: 13em;
+		}
+		@include at-breakpoint(90em) {
+			max-height: 13.5em;
+		}
+		@include at-breakpoint(95em) {
+			max-height: 14em;
 		}
 	}
 }

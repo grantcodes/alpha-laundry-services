@@ -23,11 +23,11 @@ var map = L.map('map', {
   dragging: true,
   attributionControl: false,
   zoomControl: true
-}).setView([55.8513, -4.4896], 13);
+}).setView([55.8513, -4.4896], 14);
 
 // L.control.zoom({position: 'bottomLeft'}).addTo(map);
 
-L.tileLayer('http://{s}.tile.cloudmade.com/ac08d200814142dfae0f8cedd7996d40/997/256/{z}/{x}/{y}.png', {
+L.tileLayer('http://{s}.tile.openstreetmap.se/hydda/full/{z}/{x}/{y}.png', {
   maxZoom: 18
 }).addTo(map);
 
@@ -86,5 +86,5 @@ window.onresize = sticky_nav;
 $(window).scroll(function(e) {
   var y = $(this).scrollTop() / 3;
   var header = $('header').first();
-  header.css('background-position', '50% -' + y + 'px');
+  header.css('background-position', '50% +' + y + 'px');
 });

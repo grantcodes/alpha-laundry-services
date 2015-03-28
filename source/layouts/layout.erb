@@ -9,7 +9,7 @@
     
     <title><%= data.page.title || "Alpha Laundry Services" %></title>
     
-    <%= stylesheet_link_tag "main", "http://fonts.googleapis.com/css?family=PT+Sans:400,700|Bree+Serif", "http://cdn.leafletjs.com/leaflet-0.5/leaflet.css" %>
+    <%= stylesheet_link_tag "main", "http://fonts.googleapis.com/css?family=PT+Sans:400,700|Bree+Serif", "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" %>
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -25,22 +25,22 @@
 
         <div class="opening-hours">
           <h3>Opening Hours</h3>
-          <p>Monday to Thursday: 8am - 5pm</p>
-          <p>Friday: 8am - 4pm</p>
+          <p>Monday to Friday: 8am - 5pm</p>
         </div>
       </div>
     </header>
     <nav>
       <a href="#about">About Us</a>
       <a href="#team">The Team</a>
-      <a href="#services">Our Services</a>
+      <a href="#commercial-services">Commercial Services</a>
+      <a href="#domestic-services">Domestic Services</a>
       <a href="#contact">Contact Us</a>
     </nav>
     <%= yield %>
     <footer>
       <a href="http://terminalpixel.co.uk/" class="terminal-pixel" title="Website by Terminal Pixel"></a>
     </footer>
-    <%= javascript_include_tag  "//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js", "http://cdn.leafletjs.com/leaflet-0.5/leaflet.js", "all" %>
+    <%= javascript_include_tag  "//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js", "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js", "all" %>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
