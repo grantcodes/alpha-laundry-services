@@ -1,0 +1,23 @@
+{
+  "name": "alphalaundryservices.com",
+  "version": "1.0.0",
+  "description": "The alphalaundryservices.com website",
+  "scripts": {
+    "build": "npx eleventy",
+    "watch": "npx eleventy --watch",
+    "debug": "DEBUG=* npx eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grantcodes/alpha-laundry-services.git"
+  },
+  "author": "grant.codes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/grantcodes/alpha-laundry-services/issues"
+  },
+  "homepage": "https://github.com/grantcodes/alpha-laundry-services#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.7.1"
+  }
+}
