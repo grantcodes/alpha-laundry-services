@@ -1,0 +1,62 @@
+<!doctype html>
+<!--[if lt IE 8]><html class="ie"><![endif]-->
+<!--[if gt IE 8]><!--> <html> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, min-width=18em">
+    <meta name="description" content="Alpha Laundry Services is a small family run laundry located just off the M8 near Glasgow Airport.">
+   <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>{{ title | default('Alpha Laundry Services"') }}</title>
+
+    <link rel="stylesheet" href="{{ '/css/main.css' | url }}">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,700|Bree+Serif" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+      integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+      crossorigin=""/>
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <header>
+      <div class="cell">
+        <h1>Alpha Laundry Services</h1>
+        <p data-icon="&#xf0e0;"><span class="screen-reader-text">Email: </span><a href="mailto:info@alphalaundryservices.com">info@alphalaundryservices.com</a></p>
+        <p data-icon="&#xf095;"><span class="screen-reader-text">Phone: </span><a href="tel:01505325599">01505 325599</a></p>
+        <p data-icon="&#xf041;"><span class="screen-reader-text">Address: </span><a href="#contact">Come find us</a></p>
+
+        <div class="opening-hours">
+          <h3>Opening Hours</h3>
+          <p>Monday to Friday: 8am - 5pm</p>
+        </div>
+      </div>
+    </header>
+    <nav>
+      <a href="#about">About Us</a>
+      <a href="#team">The Team</a>
+      <a href="#commercial-services">Commercial Services</a>
+      <a href="#domestic-services">Domestic Services</a>
+      <a href="#contact">Contact Us</a>
+    </nav>
+    {{ content | safe }}
+    <footer>
+      <a href="https://grant.codes" class="grantcodes">made by grant.codes</a>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+      integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+      crossorigin="" /></script>
+    <script src="{{ '/js/main.js' | url }}"><script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-42268286-1', 'alphalaundryservices.com');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>

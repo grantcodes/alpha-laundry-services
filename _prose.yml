@@ -1,5 +1,0 @@
-prose:
-    rooturl: "source"
-    siteurl: "http://alphalaundryservices.co.uk"
-    media: "img"
-    ignore: ['css', 'fonts', 'js', 'email.php', 'layouts', 'favion.ico']
