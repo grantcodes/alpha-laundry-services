@@ -34,7 +34,7 @@ L.tileLayer("http://{s}.tile.openstreetmap.se/hydda/full/{z}/{x}/{y}.png", {
 var marker = L.marker([55.8513, -4.4896])
   .addTo(map)
   .bindPopup(
-    '<p><a href="https://maps.google.co.uk/maps?saddr=Current+Location&daddr=Alpha+Laundry+Services,+Unit+16,+Mossedge+Industrial+Estate,+Linwood,+Renfrewshire+PA3+3HR&hl=en&sll=55.851026,-4.489619&sspn=0.021657,0.023217&geocode=FcKKXQMdn6vS_w%3BFRI4VAMdbX67_ymlKokci0uISDG8GqLTw3UZTg&oq=my&mra=ls&glp=1&t=m&z=8">Get Directions</a></p>'
+    '<p><a href="https://maps.google.co.uk/maps?saddr=Current+Location&daddr=Alpha+Laundry+Services,+Unit+16,+Mossedge+Industrial+Estate,+Linwood,+Renfrewshire+PA3+3HR">Get Directions</a></p>'
   )
   .openPopup();
 
